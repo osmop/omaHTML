@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <!--  
+    <meta charset="utf-8"/>
+    <meta name="google" value="notranslate"/>
+  -->   
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link  rel="stylesheet"  type="text/css"  href="./oma-4v1-1.css">
+
+        <!-- Include Java Query Functions -->
+    <script  src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script  type="text/javascript"  src="./oma-4v1.js"></script>
+    
+    <title>HTML Home Page Tests</title>
+
+  </head>
+  
+<body>
+
+<header>
+
+<a class="active" href="http://pulkkino.mbnet.fi"><i class="fa fa-home fa-fw" style="background-color:#00ffff;color:red"></i>
+<span style="color:white">Home</span></a>
+
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>
+
+<img src="./figures/decor-flower-red.jpg" height="30" width="150">
+<span style="color:white;">Page Header:  >>>> header text here <<<< </span> 
+<img src="./figures/decor-flower-flip-green.jpg" height="30" width="150">
+</header>
+
+<!--  
+<div class="home">
+<a class="active" href="http://pulkkino.mbnet.fi"><i class="fa fa-home fa-fw" style="background-color:#00ffff;color:red"></i>
+<span style="color:white">Home</span></a>
+</div>
+-->
+
+<div class="clock" id="clock">
+<!--  
+<a href="javascript:void(0)" onload="startTime()" ></a>
+-->
+</div>
+
+<div class="clock">
+<!-- 
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>
+-->
+<input id="timer" type="number" style="width:155px" placeholder="Give alert timer in minutes">
+<button onclick="startTimer();">Start alert timer</button>
+<button onclick="clearAlert();">Cancel alert</button>
+</div>
+
+
+<!-- ====================================================== -->
+
+<div class="navMenuContainer">   
+<span style="float:left"id="navMenu" onclick="leftMenuOpen()">
+ <button style="background-color: #0088ff;color: white;font-size:12px"><i class="fa fa-list"></i> Open General Menu: News/Search/SoMe</button>
+  <!--  <button style="background-color: #0088ff;color: blue;font-size:12px">Open Menu <i class="fa fa-folder-open"></i> General: News/Search/SoMe</button> -->
+</span>
+
+<span style="float:left" id="navMenu" onclick="rightMenuOpen()">
+ <button style="background-color:#0088ff;color:white;font-size:12px"><i class="fa fa-list"></i> Own: Skills/Hobbies</button>
+</span>
+</div>
+
+<!-- =============================== -->
+
+<div class="leftMenuHandler" style="display:none">
+  <a href="javascript:void(0)" onclick="leftMenuClose()"><i class="fa fa-close"></i> Close News/Search/SoMe Menu</a>
+
+<nav id="navMenu">
+  <ul class="parent-menu">
+    <li><a href="#"><i class="fa fa-newspaper-o"></i> News </a>
+      <ul>
+        <li><a href="http://www.yle.fi/tekstitv/txt/P100_01.htm">Yle Teksti TV</a></li>
+        <li><a href="http://yle.fi/uutiset/">Yle Uutiset</a></li>
+        <li><a href="http://www.iltapulu.fi/">TV Programs Iltapulu</a></li>
+        <li><a href="#">TV Programs Telkku</a></li>
+        <li><a href="#">item3 with submenu</a>
+        	 <ul>
+        		<li><a href="#">item</a></li>
+        		<li><a href="#">Even more</a>
+        		<ul>
+        		  <li><a href="#">item1</a>
+        		  <li><a href="#">item2</a></li>
+        		</ul>
+        		</li>
+        	 </ul>				
+        </li>
+        <li><a href="#">item</a></li>
+      </ul>					
+    </li>
+
+    <li><a href="#"><i class="fa fa-newspaper-o"></i> Technical News </a>
+      <ul>
+        <li><a href="#">Telecommunication</a>
+        	 <ul>
+        	   <li><a href="#">Mobile Communication</a>
+        		  <ul>
+        			 <li><a href="#">Mobile Phones</a></li>
+        			 <li><a href="#">GSM Arena</a></li>
+        			 <li><a href="#">Mobile xxx</a></li>
+        		  </ul>							
+        		</li>
+            <li><a href="#">item</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Computers</a></li>
+      </ul>
+    </li>
+    
+    <li><a href="#"><i class="fa fa-space-shuttle"></i>  Space Technology</a>
+      <ul>
+        <li><a href="http://www.universetoday.com/">Universe Today</a></li>
+        <li><a href="#">item</a></li>
+      </ul>
+    </li>
+    
+    <li><a href="#"><i class="fa fa-euro"></i> Finances/Paying </a>
+      <ul>
+        <li><a href="#">Stock</a></li>
+        <li><a href="#">Banks</a>
+        	 <ul>
+        		<li><a href="#">Bank1</a></li>
+        		<li><a href="#">Bank2</a></li>
+        	 </ul>
+        </li>
+        <li><a href="#">EBay</a></li>
+        <li><a href="https://www.paypal.com/signin/">Paypal</a></li>
+        <li><a href="#">Paytrail</a></li>
+      </ul>
+    </li>
+    
+    <li><a href="#"><i class="fa fa-newspaper-o"></i> Technical Newspapers </a>
+      <ul>
+        <li><a href="#">Tekniikka ja Talous</a></li>
+        <li><a href="#">Tietoviikko</a></li>
+        <li><a href="#">Mikrobitti</a></li>
+        <li><a href="#">Tiede</a></li>
+      </ul>
+    </li>
+    
+    <li><a href="#"><i class="fa fa-search"></i> Search Tools </a>
+      <ul>
+        <li><a href="http://www.google.com">Google</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Main_Page">Wikipedia</a></li>
+      </ul>
+    </li>
+    
+    <li><a href="#"><i class="fa fa-newspaper-o"></i> SoMe Tools </a>
+      <ul>
+        <li><a href="http://www.facebook.com">Facebook</a></li>
+        <li><a href="http://www.linkedIn.com">LinkedIn</a></li>
+      </ul>
+    </li>
+        
+  </ul>
+</nav>
+
+</div>
+
+<!-- =================================================== -->
+
+<div class="rightMenuHandler" style="display:none">
+  <a href="javascript:void(0)" onclick="rightMenuClose()"><i class="fa fa-close"></i> Close Skills/Hobbies Menu</a>
+
+<nav id="navMenu">
+  <ul class="parent-menu">
+    <li><a href="#"><i class="fa fa-envelope"></i> Mails/WebAdm </a>
+      <ul>
+        <li><a href="https://mail.google.com">gmail</a></li>
+        <li><a href="https://outlook.live.com">hotmail-outlook</a></li>
+        <li><a href="https://palvelut.mbnet.fi/webmail">mbnet webmail</a></li>
+        <li><a href="https://palvelut.mbnet.fi">mbnet adm</a></li>
+        <li><a href="https://palvelut.mbnet.fi/hallinta">mbnet support</a></li>      
+      </ul>
+    </li>
+      
+    <li><a href="#"><i class="fa fa-star-o"></i> Programming Tools </a>
+      <ul>
+        <li><a href="#">Android Studio</a></li>
+        <li><a href="#">Eclipse</a></li>
+        <li><a href="#">Netbeans</a></li>
+      </ul>
+    </li>
+    
+    <li><a href="#"><i class="fa fa-star-o"></i> Coding </a>
+      <ul>
+        <li><a href="http://www.w3schools.com/"> HTML/CSS/JS </a></li>
+          <li><a href="#">C/C++</a></li>
+          <li><a href="#">Python</a></li>
+      </ul>
+    </li>
+         
+    <li><a href="#"><i class="fa fa-star-o"></i> Software Testing </a>
+      <ul>
+        <li><a href="#">Robot Framework</a></li>
+        <li><a href="#">Selenium</a></li>
+        <li><a href="#">jBehave</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#"><i class="fa fa-sun-o"></i> Energy Systems </a>
+      <ul>
+        <li><a href="#">Solar Panels</a>
+        	 <ul>
+        		<li><a href="#">Panels</a></li>
+        		<li><a href="#">Solar Panel Control</a></li>
+        	 </ul>
+        </li>
+        <li><a href="#">Geothermal Heat Pump</a>
+        	 <ul>
+        		<li><a href="http://www.dimplex.de/animationen/kreislauf.php?lang=en">Operation Method</a></li>
+        		<li><a href="#">Solar Panel Control</a></li>
+        	 </ul>        
+        </li>
+        <li><a href="#">Air Heat Pump</a></li>
+        <li><a href="#">Natural Gas</a></li>
+        <li><a href="#">Oil</a></li>
+        <li><a href="#">Wind Mill</a></li>
+      </ul>
+    </li>     
+     
+    <li><a href="#"><i class="fa fa-smile-o"></i> Own Hobbies </a>
+      <ul>
+        <li><a href="#">House and Summer Cottage</a></li>
+        <li><a href="#">Skiing</a>
+        	 <ul>
+        		<li><a href="#">Cross Country</a></li>
+        		<li><a href="#">Downhill</a></li>
+        	 </ul>
+        </li> 
+        <li><a href="#">Jo(g)ging</a></li>
+        <li><a href="#">Swimming</a></li>
+        <li><a href="#">Nature Wandering</a></li>
+        <li><a href="#">Berries and Mushrooms</a></li>
+        <li><a href="#">Boats/Seasides/Fishing</a></li>
+      </ul>
+    </li>
+    
+    <li><a href="#"><i class="fa fa-star-o"></i> Games </a>
+      <ul>
+        <li><a href="http://computerchessonline.net/chess-online-against-computer/">Chess</a></li>
+        <li><a href="http://d3tetris.herokuapp.com/">Tetris</a></li>
+        <li><a href="http://www.angrybirdsgames.com/">AngryBirds</a></li> 
+        <li><a href="#">GameX</a></li>
+      </ul>
+    </li>
+    
+    <li><a href="https://photos.google.com/shared"><i class="fa fa-star-o"></i> Fotos </a>
+    <!--  
+      <ul>
+        <li><a href="https://photos.google.com/shared">Animals</a></li>
+        <li><a href="#">Flowers</a></li>
+        <li><a href="#">Scenery</a></li>
+        <li><a href="#">Paintings</a></li>
+        <li><a href="#">Buildings</a></li>     
+        <li><a href="#">MIsc</a></li>
+      </ul>
+    </li>
+    --> 
+    
+    <li><a href="#"><i class="fa fa-star-o"></i> Nature web cameras </a>
+      <ul>
+        <li><a href="http://pontu.eenet.ee/player/merikotkas.html">Merikotka-White-tailed Eagle (Haliaeetus albicilla)</a></li>
+        <li><a href="http://pontu.eenet.ee/player/kalakotkas.html">Kalas&#228;&#228;ski-Osprey (Pandion haliaetus)</a></li>
+        <li><a href="http://saaristomeri.utu.fi/osprey/">Kalas&#228;&#228;ski-Seili</a></li>
+        <li><a href="http://pontu.eenet.ee/player/must-toonekurg.html">Mustahaikara-Black Stork (Ciconia nigra)</a></li>
+        <li><a href="http://pontu.eenet.ee/player/hiireviu.html">Hiirihaukka-Eurasian Buzzard (Buteo buteo)</a></li>
+        <li><a href="http://www.viewbirds.com/">View nesting birds</a></li>
+        <li><a href="http://cams.allaboutbirds.org/all-cams/">Birds in North America</a></li>
+        <li><a href="https://www.cliftonhill.com/explore/media-gallery/niagara-falls-cam">Niagara Falls</a></li>
+        <li><a href="http://www.ustream.tv/channel/live-iss-stream">Live ISS stream</a></li>
+      </ul>
+    </li>
+      
+    <li><a href="#"><i class="fa fa-star-o"></i> Misc </a>
+      <ul>
+        <li><a href="#">Electric Cars</a></li>
+        <li><a href="#">Electric Bicycles</a></li>
+        <li><a href="#">Triacs</a></li>
+      </ul>
+    </li>    
+
+  </ul>
+</nav>
+
+</div>
+
+<!-- ========================================================================================================= -->
+
+<img  src="./figures/osmo.jpg"  height="180"  width="240">
+
+<p>
+Hi!
+</p>
+
+<p>
+I am learning how to make my own web page.
+<br>
+This web page includes tests of the following HTML page structures:
+</p>
+
+<ul>
+  <li>Clock with JavaScript support</li> 
+  <li>Alert timer with JavaScript support</li> 
+  <li>Menu opening/closing and navigations
+    <ul>
+      <li>Only a few links have a real HTTP address</li>
+    </ul>
+  </li>
+
+  <li>HTTP page styling (CSS=Cascading Styling Sheet)</li> 
+  <li>JavaScript linking in web page design</li>
+  <li>Item selection</li>
+  <li>Forms
+    <ul>
+      <li>Irrelevant mail address used</li>
+    </ul>
+  </li>
+  <li>Link to section on the same HTML page e.g. <a href="#1stFormBelow" style="color:blue">1st Form Below</a></li>
+  <li>Symbols</li>
+</ul>
+
+
+<p>
+Have a nice day !
+<br>
+<br>
+<span style="color:red;"> &#x2600; &#x2600; &#x263A; &hearts; &hearts; &hearts; &#x263A; &#x2600; &#x2600; </span> 
+<!--  ¤º°`°º¤ø,¸,ø¤º°`°º¤ø,¸,ø¤º°`°º¤ø,¸¸,ø¤º°`°  -->
+</p>
+
+
+ 
+<!-- ====================================================== -->
+
+<h1>Item Selection</h1>
+<h2>Select an item and send it</h2>  
+  <form action="MAILTO:xxx@live.com" method="post" enctype="text/plain">
+  <select name="agent_name" required>
+    <option value="" selected>[Please Select Agent]</option>
+    <option value="Homer">Agent Homer</option>
+    <option value="Lenny">Agent Lenny</option>
+    <option value="Carl">Agent Carl</option>
+  </select>
+  <input type="submit" value="Submit">
+  </form>
+  
+<h1>Form Handling</h1>
+<h2 id="1stFormBelow">1st Form Below</h2>
+  <form  action="MAILTO:xxx@gmail.com" method="post" enctype="text/plain">
+    <p>Give Your Comments !<br>
+      <input  type="text" name="comment" placeholder="your comments" size="150">
+    </p>
+    <p>
+      <input value="Reset Your Comment" type="reset">    
+      <!--  <input  value="Send Your Comment"  type="submit"> -->  <!-- HTML4 (Still works in HTML5) -->
+      <button type="submit">Submit</button>  <!-- HTML5 Only -->
+    </p>
+  </form>
+
+<!-- ======================= -->
+
+<h2>2nd Form Below</h2>
+    
+  <form  action="MAILTO:xxx@hotmail.com" method="post" enctype="text/plain">
+    <!--  <form action="/scripts/sendmail.php" method="POST"> -->
+    <p>Name:<br>
+      <input type="text" name="full_name" placeholder="Enter Your Name" size="40" maxlength="100" required>
+    </p>
+    <p>
+      When Would You Like to Visit?<br>
+      <input type="date" min="2015-01-01" max="2015-12-31" name="booking_date" placeholder="Year-Month-Day">
+    </p>
+    <p>
+      Do you have any special requirements?<br>
+      <textarea name="special_requirements" cols="40" rows="5" placeholder="Do you need help with access, or have any dietary requirements?"></textarea>
+    </p>
+    <p>
+      <button type="reset">Reset Form Data</button>
+      <button type="submit">Submit</button> <!-- HTML5 Only -->
+      <!--  <input type="submit" value="Submit"> -->  <!-- HTML4 (Still works in HTML5) -->
+    </p>
+  </form>
+    
+<!-- ======================= -->
+
+<br>
+<footer class="aligncenterdiv">
+<div>
+<a class="active" href="http://pulkkino.mbnet.fi"><i class="fa fa-home fa-fw" style="background-color:#00ffff;color:red"></i>
+<span style="color:white">Home</span></a>
+
+<span>&nbsp; &nbsp; &nbsp;</span>
+<span style="color:white;">Page Footer:  >>>> E.g. Copyright &copy; Own Company Name <<<< </span>
+</div>
+</footer>
+
+<!-- ===================================================== -->
+
+</body>
+</html>
