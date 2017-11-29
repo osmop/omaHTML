@@ -1,0 +1,189 @@
+header {
+  /* display: table-header-group; */
+  /* top: 0px; */
+  display: inline-block;
+  background-color:blue;
+  color:white;
+  font-size:11px;
+  padding:5px;
+  text-align:center;
+  width: 100%;
+}
+
+.aligncenterdiv {
+    display: block;
+    width:100%;
+    right:0;
+    background-color:blue;
+    /* margin-right:30%; */
+    /* float: left; */
+    /* margin: auto;
+     margin-left: auto;
+    margin-right: auto; */
+    }
+    
+.home {
+    display: block;
+    background-color:blue;
+    color:white;
+    font-size:12px;
+    width: 100%;
+ }
+    
+.clock {
+    display: inline-block;
+    background-color:blue;
+    color:white;
+    font-size:12px;
+    width: 100%;
+ }
+
+/*
+section {
+  width:350px;
+  float:left;
+  padding:10px; 
+}
+*/
+
+body {
+  text-align: left;
+  background: url("./figures/ruskaHaapoja.jpg");
+  /* background: url("./figures/revontulet.jpg");*/
+  background-size: cover;
+  /*background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: black; */
+  font-family: Arial;
+}
+ 
+footer {
+  /* display: inline-block; */
+  background-color:blue;
+  color:white;
+  padding:5px;
+  bottom:0;
+  text-align:center;
+  font-size: 11px;
+  /* width: 100%; */ 
+  /*clear:both;*/
+  position:fixed;	 
+}
+
+.parent-menu ul, .parent-menu li, .parent-menu nav{
+  padding:0;
+  margin:0;
+}
+
+#navMenu ul, #navMenu li, #navMenu nav{
+  padding:0;
+  margin:0;
+}
+
+/* 
+p, ul, li, div, nav{
+  padding:0;
+  margin:0;
+}
+*/
+
+/*
+h1, h2, p {
+  text-align: left;
+}
+*/
+
+/*
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+*/
+
+i {
+  color: red;
+}
+
+#navMenu {
+  overflow: auto;
+  position:relative;
+  z-index:2; /* z-index: stack order of the element */
+}
+
+.parent-menu {            
+  background-color: #0088ff;
+  min-width:250px;
+  float:left;
+}
+
+#navMenu ul
+{
+  list-style-type:none;
+}
+
+#navMenu ul li a
+{
+  padding:10px 15px;
+  display:block;
+  color:#fff;
+  color:white;
+  text-decoration:none;
+}
+
+#navMenu ul li a:hover
+{
+  background-color:#007ee9;
+  background-color:#006dcc;
+  background-color:blue;
+}
+
+#navMenu ul li:hover > ul {
+  left: 250px;
+  -webkit-transition: left 200ms ease-in;
+  -moz-transition: left 200ms ease-in;
+  -ms-transition: left 200ms ease-in;
+  transition: left 200ms ease-in;
+}
+
+#navMenu ul li > ul {
+  position: absolute;
+  background-color: #333;
+  background-color: #0088ff;
+  top: 0;
+  left: -250px;
+  min-width: 250px;
+  z-index: -1; /* z-index: stack order of the element */
+  height: 100%;
+  -webkit-transition: left 200ms ease-in;
+  -moz-transition: left 200ms ease-in;
+  -ms-transition: left 200ms ease-in;
+  transition: left 200ms ease-in;
+}
+
+#navMenu ul li > ul li a:hover
+{
+  background-color:#2e2e2e;
+  background-color:blue;
+}
+
+/* -- */
+    
+.navMenuContainer {
+  display: inline-block;
+  width: 100%;
+  text-align : center;
+   /* height: 120px; 
+    background: #ccc; */
+}
+
+/* ------------------------------------ */
+
+
