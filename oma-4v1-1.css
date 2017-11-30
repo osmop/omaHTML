@@ -48,8 +48,8 @@ section {
 
 body {
   text-align: left;
-  background: url("./figures/ruskaHaapoja.jpg");
-  /* background: url("./figures/revontulet.jpg");*/
+  background: url("./ruskaHaapoja.jpg");
+  /* background: url("./revontulet.jpg");*/
   background-size: cover;
   /*background-position: center center;
   background-repeat: no-repeat;
